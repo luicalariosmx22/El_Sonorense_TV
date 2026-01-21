@@ -132,6 +132,24 @@ object ProgrammingData {
                 endTime = "23:00",
                 category = "Entretenimiento",
                 isLive = isCurrentTime("22:00", "23:00")
+            ),
+            Program(
+                id = "ent_5",
+                title = "Tradiciones Vivas",
+                description = "Especiales sobre las tradiciones sonorenses",
+                startTime = "14:00",
+                endTime = "15:00",
+                category = "Entretenimiento",
+                isLive = isCurrentTime("14:00", "15:00")
+            ),
+            Program(
+                id = "ent_6",
+                title = "Mesa Redonda",
+                description = "Debate y análisis político",
+                startTime = "19:00",
+                endTime = "20:00",
+                category = "Entretenimiento",
+                isLive = isCurrentTime("19:00", "20:00")
             )
         )
     }

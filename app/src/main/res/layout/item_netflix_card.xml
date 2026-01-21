@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/card_focus_selector"
+    android:focusable="true"
+    android:clickable="true">
+
+    <!-- Imagen/Fondo del programa -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/sonorense_orange"
+        android:id="@+id/program_image_container">
+
+        <!-- Gradiente overlay -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_gradient_overlay" />
+
+        <!-- Emoji grande como en HTML -->
+        <TextView
+            android:id="@+id/program_emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🍳"
+            android:textSize="48sp"
+            android:layout_centerInParent="true" />
+
+        <!-- Indicador EN VIVO -->
+        <TextView
+            android:id="@+id/card_live_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔴 EN VIVO"
+            android:background="@drawable/live_indicator_bg"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:padding="6dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            android:visibility="gone" />
+
+        <!-- Play button overlay -->
+        <ImageView
+            android:id="@+id/play_overlay"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_play_circle"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:alpha="0.9" />
+
+    </RelativeLayout>
+
+    <!-- Info del programa -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/program_image_container"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@color/sonorense_black">
+
+        <TextView
+            android:id="@+id/card_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Título"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/card_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción"
+            android:textColor="@color/sonorense_yellow"
+            android:textSize="12sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="2dp" />
+
+    </LinearLayout>
+
+    <!-- Progress bar para "Continúa Viendo" -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_alignParentBottom="true"
+        android:progressTint="@color/sonorense_orange"
+        android:backgroundTint="@color/sonorense_orange_dark"
+        android:visibility="gone"
+        style="@android:style/Widget.ProgressBar.Horizontal" />
+
+</RelativeLayout>

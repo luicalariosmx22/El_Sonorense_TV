@@ -1,13 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/sonorense_black">
 
-    <fragment
-        android:id="@+id/main_browse_fragment"
-        android:name="mx.elsonorense.tv.MainBrowseFragment"
+    <!-- Contenido principal -->
+    <LinearLayout
+        android:id="@+id/main_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <!-- Navbar como en HTML -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/header_gradient"
+            android:padding="20dp">
+
+            <!-- Logo y Menu -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Botón Menu Hamburguesa -->
+                <ImageView
+                    android:id="@+id/menu_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_menu"
+                    android:layout_marginEnd="20dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:scaleType="centerInside" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="20dp" />
+
+                <!-- Navegación principal como HTML -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inicio"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@color/sonorense_orange"
+                    android:padding="12dp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="En Vivo"
+                    android:textColor="@color/white"
+                    android:padding="12dp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Programas"
+                    android:textColor="@color/white"
+                    android:padding="12dp"
+                    android:layout_marginEnd="8dp" />
+
+            </LinearLayout>
+
+            <!-- Time Display como HTML -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/time_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19:45"
+                    android:textColor="@color/sonorense_yellow"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/date_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lunes, 20 Enero"
+                    android:textColor="@color/sonorense_orange"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Hero Banner GRANDE como HTML -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:background="@drawable/hero_banner_bg"
+                    android:padding="60dp">
+
+                    <LinearLayout
+                        android:layout_width="600dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true">
+
+                        <!-- Indicadores EN VIVO + Categoría -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🔴 EN VIVO"
+                                android:background="@drawable/live_indicator_bg"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:padding="8dp"
+                                android:layout_marginEnd="12dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PROGRAMA ESPECIAL"
+                                android:background="@color/sonorense_orange"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:padding="8dp" />
+
+                        </LinearLayout>
+
+                        <!-- Título GRANDE como HTML -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AL TINGO AL TANGO"
+                            android:textColor="@color/sonorense_yellow"
+                            android:textSize="48sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="12dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="con Doña Lupe"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="20dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🔴 EN VIVO - El programa más querido de Sonora. Recetas tradicionales sonorenses con el cariño y sabiduría de siempre."
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="30dp" />
+
+                        <!-- Botones como HTML -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/hero_play_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="▶ Ver Ahora"
+                                android:background="@color/sonorense_orange"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:padding="16dp"
+                                android:layout_marginEnd="12dp" />
+
+                            <Button
+                                android:id="@+id/hero_more_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ℹ Más Info"
+                                android:background="#33FFFFFF"
+                                android:textColor="@color/white"
+                                android:padding="16dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!-- Sección: Transmisión en Vivo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📡 Transmisión en Vivo"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="20dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/live_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+                </LinearLayout>
+
+                <!-- Sección: Programas Destacados -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⭐ Programas Destacados"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="20dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/featured_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp" />
+
+                </LinearLayout>
+
+                <!-- Sección: Continúa Viendo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📺 Continúa Viendo"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="20dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/continue_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!-- Sidebar overlay -->
+    <include
+        layout="@layout/sidebar_menu"
+        android:id="@+id/sidebar"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true" />
+
+    <!-- Overlay oscuro para cerrar sidebar -->
+    <View
+        android:id="@+id/sidebar_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true" />
+
+</RelativeLayout>
