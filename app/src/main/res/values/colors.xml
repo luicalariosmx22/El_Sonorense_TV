@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- El Sonorense Brand Colors -->
-    <color name="sonorense_orange">#e6442e</color>
-    <color name="sonorense_yellow">#fed658</color>
-    <color name="sonorense_black">#191519</color>
-    <color name="sonorense_orange_dark">#d63825</color>
-    <color name="sonorense_yellow_dark">#e6c245</color>
-    
+    <!-- El Sonorense Brand Colors - ACTUALIZADOS -->
+    <color name="sonorense_orange">#E95929</color>
+    <color name="sonorense_yellow">#FBC352</color>
+    <color name="sonorense_black">#000000</color>
+    <color name="sonorense_orange_dark">#D63825</color>
+    <color name="sonorense_yellow_dark">#E6C245</color>
+
+    <!-- Nuevos colores para mejor UI -->
+    <color name="sonorense_dark_bg">#1A1A1A</color>
+    <color name="sonorense_card_bg">#2D2D2D</color>
+    <color name="sonorense_accent_blue">#1E1E40</color>
+    <color name="live_red">#FF4444</color>
+
     <!-- App specific colors -->
     <color name="primary_color">@color/sonorense_orange</color>
     <color name="accent_color">@color/sonorense_yellow</color>
-    <color name="background_color">@color/sonorense_black</color>
-    
+    <color name="background_color">@color/sonorense_dark_bg</color>
+
+    <!-- Focus states para Android TV -->
+    <color name="focus_orange">#E95929</color>
+    <color name="focus_orange_bright">#FF6B3D</color>
+
     <!-- System colors -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
