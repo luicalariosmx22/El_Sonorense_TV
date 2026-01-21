@@ -10,7 +10,6 @@ import mx.elsonorense.tv.adapter.ProgrammingAdapter
 
 class ProgrammingActivity : AppCompatActivity() {
     
-    private lateinit var titleTextView: TextView
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: ProgrammingAdapter
     
@@ -24,7 +23,6 @@ class ProgrammingActivity : AppCompatActivity() {
     }
     
     private fun initViews() {
-        titleTextView = findViewById(R.id.programming_title)
         recyclerView = findViewById(R.id.programming_recycler)
     }
     
