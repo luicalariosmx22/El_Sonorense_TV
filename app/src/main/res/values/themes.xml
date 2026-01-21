@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    
+    <!-- TEMA BASE LIMPIO -->
+    <style name="Theme.ElSonorenserTV.Clean" parent="Theme.Leanback.Browse">
+        <item name="android:windowBackground">@color/sonorense_black</item>
+        <item name="android:colorBackground">@color/sonorense_black</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/sonorense_yellow</item>
+        <item name="colorPrimary">@color/sonorense_orange</item>
+        <item name="colorAccent">@color/sonorense_yellow</item>
+    </style>
+
+    <!-- TEMA PARA PLAYER -->
+    <style name="Theme.PlayerActivity" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/sonorense_black</item>
+        <item name="colorPrimary">@color/sonorense_orange</item>
+        <item name="colorAccent">@color/sonorense_yellow</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+    
+    <!-- TEMA PARA PROGRAMMING -->
+    <style name="Theme.Programming" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/sonorense_black</item>
+        <item name="colorPrimary">@color/sonorense_orange</item>
+        <item name="colorAccent">@color/sonorense_yellow</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/sonorense_yellow</item>
+    </style>
+</resources>

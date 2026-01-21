@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Estado cuando está enfocado -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#33e6442e" />
+            <corners android:radius="6dp" />
+            <stroke 
+                android:width="2dp" 
+                android:color="@color/sonorense_orange" />
+        </shape>
+    </item>
+    
+    <!-- Estado normal -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#22000000" />
+            <corners android:radius="6dp" />
+            <stroke 
+                android:width="1dp" 
+                android:color="#44ffffff" />
+        </shape>
+    </item>
+    
+</selector>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">El Sonorense TV</string>
+    <string name="live_stream">🔴 EN VIVO - El Sonorense</string>
+    <string name="live_stream_description">Transmisión en directo desde Sonora</string>
+    <string name="main_title">El Sonorense TV</string>
+    <string name="browse_title">Contenido</string>
+    <string name="loading">Cargando...</string>
+</resources>

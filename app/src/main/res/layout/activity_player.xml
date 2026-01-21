@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sonorense_black">
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <!-- Header con título y botón de regreso -->
+    <LinearLayout
+        android:id="@+id/player_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:background="@drawable/header_gradient"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_revert"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:tint="@color/sonorense_yellow"
+            android:contentDescription="Regresar"/>
+
+        <TextView
+            android:id="@+id/player_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="El Sonorense TV - En Vivo"
+            android:textColor="@color/sonorense_yellow"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_agenda"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:tint="@color/sonorense_yellow"
+            android:contentDescription="Ver Programación"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
